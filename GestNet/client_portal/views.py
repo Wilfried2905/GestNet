@@ -1,9 +1,6 @@
-# client_portal/urls.py
-from django.urls import path
-from . import views
+# client_portal/views.py
+from django.shortcuts import render
+from django.http import HttpResponse
 
-urlpatterns = [
-    path('', views.index, name='index'),
-    # Ajoutez d'autres chemins ici
-]
-
+def index(request):
+    return HttpResponse("Bienvenue sur le portail client.")
